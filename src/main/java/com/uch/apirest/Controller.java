@@ -13,9 +13,9 @@ public class Controller {
     public List<Name> getName(){
         Name[] names = new Name[3];
 
-        names[0] = new Name ( "Facundo Calderon", 19);
-        names[1] = new Name ( "Ramiro Gogol", 19);
-        names[2] = new Name ( "Tomas Serrani", 19);
+        names[0] = new Name ( "Facundo Calderon", 19, new Direccion ("Tomas Thomas", 174, "San Martin"));
+        names[1] = new Name ( "Ramiro Gogol", 19, new Direccion("España", 284, "San Martin"));
+        names[2] = new Name ( "Tomas Serrani", 19, new Direccion("Las Heras", 186, "San Martin"));
 
         List<Name> nameList = Arrays.asList(names);
 

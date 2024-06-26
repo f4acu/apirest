@@ -3,9 +3,12 @@ package com.uch.apirest;
 public class Name{
     private String nombre;
     private int edad;
-    public Name(String nombre, int edad){
+    private Direccion direccion;
+
+    public Name(String nombre, int edad, Direccion direccion){
         this.nombre = nombre;
         this.edad = edad;
+        this.direccion = direccion;
     }
     public String getNombre() {
         return nombre;
@@ -21,6 +24,14 @@ public class Name{
 
     public void setEdad(int edad) {
         this.edad = edad;
+    }
+
+    public Direccion getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(Direccion direccion) {
+        this.direccion = direccion;
     }
 }
 
