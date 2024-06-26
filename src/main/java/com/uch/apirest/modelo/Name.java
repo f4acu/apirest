@@ -1,9 +1,26 @@
-package com.uch.apirest;
+package com.uch.apirest.modelo;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name="name")
 public class Name{
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
+    @Column (name = "Nombre")
     private String nombre;
+    @Column (name= "Edad")
     private int edad;
+
+    @OneToOne(mappedBy = "name", cascade = CascadeType.ALL)
+    @PrimaryKeyJoinColumn
     private Direccion direccion;
+
+    public Name(){
+
+    }
 
     public Name(String nombre, int edad, Direccion direccion){
         this.nombre = nombre;
