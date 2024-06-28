@@ -8,7 +8,7 @@ public class Direccion {
 
     @Id
     @Column (name = "name_id")
-    private int id;
+    private Long id;
     @Column (name= "calle", nullable = false)
     private String calle;
     @Column (name = "numero", nullable = false)
@@ -30,28 +30,26 @@ public class Direccion {
     private Name name;
 
     public String getCalle() {
-            return calle;
-        }
-
-        public void setCalle(String calle) {
-            this.calle = calle;
+        return calle;
+    }
+    public void setCalle(String calle) {
+        this.calle = calle;
     }
     public int getNumero() {
-            return numero;
+        return numero;
     }
-
-        public void setNumero(int numero) {
-            this.numero = numero;
+    public void setNumero(int numero) {
+        this.numero = numero;
     }
     public String getCiudad() {
         return ciudad;
     }
-
-        public void setCiudad(String ciudad) {
-            this.ciudad = ciudad;
+    public void setCiudad(String ciudad) {
+        this.ciudad = ciudad;
     }
 
     public void setName(Name name) {
         this.name = name;
     }
 }
+
